@@ -1,3 +1,3 @@
-Repositorio individual del Alumno: Gonzalo Lavado Jaén
+# Alumno - Gonzalo Lavado 
 
-En este espacio se situarán los proyectos que son tareas del curso 24-25.
+Repositorio donde se situan los proyectos que son tareas del curso 24-25.
