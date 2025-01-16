@@ -22,7 +22,6 @@ public class Main {
 
         do {
             menu();
-            System.out.println("Ingrese una opción: ");
             op = escanear.nextInt();
             switch (op) {
                 case 1:
@@ -33,7 +32,7 @@ public class Main {
                     break;
                 case 3:
                     System.out.println("Ingrese un género: ");
-                    String generoBuscar = escanear.next().toLowerCase();
+                    String generoBuscar = escanear.next().toUpperCase();
                     System.out.println(pelis.mostrarListaGenero(generoBuscar));
                     break;
                 case 4:
@@ -57,6 +56,7 @@ public class Main {
                     3. Pedir un género y mostrar el título de las pelis de ese género.
                     4. Duración de la peli. Pedir título y mostrar su duración.
                     5. SALIR
+                    Ingrese una opción:
                 """);
     }
 }

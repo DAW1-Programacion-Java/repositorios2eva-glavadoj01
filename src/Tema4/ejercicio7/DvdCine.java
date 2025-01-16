@@ -95,9 +95,9 @@ public class DvdCine {
 
     // Métodos especiales
     public boolean esThriller() {
-        return Generos.Thriller.equals(this.genero);
+        return Generos.THRILLER.equals(this.genero);
         /* También vale
-        return this.genero.equals(Generos.Thriller);
+        return this.genero.equals(Generos.THRILLER);
          */
     }
 
@@ -106,7 +106,7 @@ public class DvdCine {
     }
 
     // Métodos sobreescritos
-    @Override
+    @Override // Es igual si: Mismo Título & Director (resto no requerido)
     public boolean equals(Object o) {
         if (o == null || getClass() != o.getClass()) return false;
         DvdCine dvdCine = (DvdCine) o;
