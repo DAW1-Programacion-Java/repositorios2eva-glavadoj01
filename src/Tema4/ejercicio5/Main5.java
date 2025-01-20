@@ -1,20 +1,15 @@
-package ejercicio6;
+package ejercicio5;
 /*
-Diseña un programa Java que trabaje con la clase Alumno del ejercicio 5, copiándola
-y pegándola en este. Crea otra clase llamada GestionAlumnos con las siguientes características:
-    - Atributos: array de 10 Alumnos
-    - Métodos:
-            - llenarArray, rellena el array de alumnos con datos.
-            - mostrarAlumnos, muestra en pantalla cada alumno y su nota media.
-            - mostrarNotas, muestra nº de expediente, nombre y nota media de cada alumno.
-            - buscarAlumnoPorNumeroExpediente. Recibe como parámetro un nº de expediente
-                y devuelve/retorna al alumno con ese nº expediente, o null si no lo encuentra.
-    - Prueba la clase GestionAlumnos.
+En un nuevo proyecto, copia la clase Alumno del ejercicio 1, y añade:
+a. Dos atributos que guarden sendas notas (tipo double).
+b. Crea los métodos get/set correspondientes, modifica también el constructor para que incluya estas notas.
+c. Crea un método que devuelva la media de las notas (double).
+d. Crea un método que devuelva número de expediente, nombre y nota media.
 */
 
 import java.time.LocalDate;
 
-public class Main {
+public class Main5 {
     public static void main(String[] args) {
         Alumno persona1 = new Alumno(1234, "Alicia", "García García", LocalDate.of(1995, 1, 25), "Programación", 5.7, 8.5);
         Alumno persona2 = new Alumno(4321, "Bob", "Hernandez Hernandez", LocalDate.of(1998, 11, 2), "Programación", 4.4, 3.3);

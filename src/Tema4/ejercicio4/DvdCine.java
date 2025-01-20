@@ -96,9 +96,9 @@ public class DvdCine {
 
     // Métodos especiales
     public boolean esThriller() {
-        return Generos.Thriller.equals(this.genero);
+        return Generos.THRILLER.equals(this.genero);
         /* También vale
-        return this.genero.equals(Generos.Thriller);
+        return this.genero.equals(Generos.THRILLER);
          */
     }
 

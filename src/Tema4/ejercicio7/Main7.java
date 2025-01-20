@@ -3,7 +3,7 @@ package ejercicio7;
 /*
 Diseña un programa Java que trabaje con la clase DvdCine creada en el ejercicio anterior.
 Crea una clase (GestionDvd) que incluya como atributo un array de objetos pertenecientes
-a la clase DvdCine y como métodos las opciones del menú.El menú de la aplicación sería:
+a la clase DvdCine y como métodos las opciones del menú. El menú de la aplicación sería:
 Menú de opciones:
         1. Mostrar la lista de películas (Título y productora)
         2. Mostrar la película de más duración (Título y minutos)
@@ -14,7 +14,7 @@ Menú de opciones:
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Main {
+public class Main7 {
     public static void main(String[] args) {
         Scanner escanear = new Scanner(System.in);
         GestionDvd pelis = new GestionDvd();
@@ -23,13 +23,13 @@ public class Main {
 
 
         // Crear Objetos DvdCine y Listas de Actores
-        ArrayList<String> listaActores1 = new ArrayList<String>();
+        ArrayList<String> listaActores1 = new ArrayList<>();
         listaActores1.add(0,"Ian McKellen");
         listaActores1.add(1, "Martin Freeman");
         DvdCine dvd1 = new DvdCine ("El hobbit. La desolación de Smaug", "Peter Jackson", "New Line Cinema. & Metro-Goldwyn-Mayer", listaActores1, Generos.CIENCIAFICCION, "Bla...", 123);
         pelis.agregarDvd(dvd1);
 
-        ArrayList<String> listaActores2 = new ArrayList<String>();
+        ArrayList<String> listaActores2 = new ArrayList<>();
         listaActores2.add(0,"Al Pacino");
         listaActores2.add(1, "Marlon Brando");
         DvdCine dvd2 = new DvdCine ("El Padrino", "Francis Ford Copola", "Paramount Pictures" , listaActores2, Generos.DRAMA, "Bla...", 175);
