@@ -37,4 +37,48 @@ public class GestionProgramas {
     public void agregarProgramaEnLista(ProgramaSoftware programa) {
         listaGestion.add(programa);
     }
+
+    public void mostrarLista() {
+        for (ProgramaSoftware p : listaGestion) {
+            System.out.println(p);
+        }
+    }
+
+    public ArrayList<ProgramaSoftware> filtarLicencia (String entrada) {
+        Licencia licenciaBuscar = Licencia.valueOf(entrada.toUpperCase());
+        ArrayList<ProgramaSoftware> salida = new ArrayList<>();
+
+        for (ProgramaSoftware p : listaGestion) {
+            if (p.getLicencia() == licenciaBuscar) {
+                salida.add(p);
+            }
+        }
+        return salida;
+    }
+
+    public ArrayList<ProgramaSoftware> filtarFuncion (String entrada) {
+        Funcion funcionBuscar = Funcion.valueOf(entrada.toUpperCase());
+        ArrayList<ProgramaSoftware> salida = new ArrayList<>();
+
+        for (ProgramaSoftware p : listaGestion) {
+            if (p.getFuncion() == funcionBuscar) {
+                salida.add(p);
+            }
+        }
+        return salida;
+    }
+
+    public void eliminarUltimoPrograma() {
+        listaGestion.remove(listaGestion.size()-1);
+        // listaGestion.removeLast();
+    }
+
+    public ProgramaSoftware buscarNombre(String entrada) {
+        for (ProgramaSoftware p : listaGestion) {
+            if (p.getNombre().equals(entrada)) {
+                return p;
+            }
+        }
+        return null;
+    }
 }

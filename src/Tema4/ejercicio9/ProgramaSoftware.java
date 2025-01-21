@@ -8,9 +8,11 @@ Cada programa tendrá como atributos su nombre, versión,
 */
 
 import java.time.LocalDate;
+import java.util.Random;
 
 public class ProgramaSoftware {
-    private final int idPrograma;
+    // Atributos del objeto
+    private int idPrograma;
     private String nombre;
     private String version;
     private Funcion funcion;
@@ -19,6 +21,7 @@ public class ProgramaSoftware {
     private Licencia licencia;
     private double precio;
     private static int contadorProgramas = 0;
+    public static Random crearRandom = new Random();
 
     // Constructor completo
     public ProgramaSoftware(String nombre, String version, Funcion funcion, LocalDate annoLanzamiento,
@@ -47,7 +50,25 @@ public class ProgramaSoftware {
         this.precio = precio;
     }
 
+    // Constructor Parcial 2
+    public ProgramaSoftware(String nombre, Funcion funcion, Licencia licencia) {
+        contadorProgramas++;
+        this.idPrograma = contadorProgramas;
+        this.nombre = nombre;
+        this.version = "Unknown";
+        this.funcion = funcion;
+        this.annoLanzamiento = LocalDate.of(1900, 1, 1);
+        this.desarrolladora = "Unknown";
+        this.licencia = licencia;
+        this.precio = Math.round(crearRandom.nextDouble(100.01));
+    }
+
+
     // Generador de Getter's & Setter's
+    public int getIdPrograma() {
+        return idPrograma;
+    }
+
     public String getNombre() {
         return nombre;
     }
@@ -102,5 +123,18 @@ public class ProgramaSoftware {
 
     public void setPrecio(double precio) {
         this.precio = precio;
+    }
+
+    @Override
+    public String toString() {
+        return "ProgramaSoftware{" +
+                "Nombre = '" + nombre +
+                "';\tVersión = '" + version +
+                "';\tFunción = '" + funcion +
+                "';\tAño de Lanzamiento = '" + annoLanzamiento +
+                "';\tDesarrolladora = '" + desarrolladora +
+                "';\tLicencia = '" + licencia +
+                "';\tPrecio=" + precio +
+                '}';
     }
 }
