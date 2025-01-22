@@ -45,24 +45,28 @@ public class GestionProgramas {
     }
 
     public ArrayList<ProgramaSoftware> filtarLicencia (String entrada) {
-        Licencia licenciaBuscar = Licencia.valueOf(entrada.toUpperCase());
         ArrayList<ProgramaSoftware> salida = new ArrayList<>();
 
-        for (ProgramaSoftware p : listaGestion) {
-            if (p.getLicencia() == licenciaBuscar) {
-                salida.add(p);
+        if(Licencia.esLicenciaPrograma(entrada)) {
+            Licencia licenciaBuscar = Licencia.valueOf(entrada.toUpperCase());
+            for (ProgramaSoftware p : listaGestion) {
+                if (p.getLicencia() == licenciaBuscar) {
+                    salida.add(p);
+                }
             }
         }
         return salida;
     }
 
     public ArrayList<ProgramaSoftware> filtarFuncion (String entrada) {
-        Funcion funcionBuscar = Funcion.valueOf(entrada.toUpperCase());
         ArrayList<ProgramaSoftware> salida = new ArrayList<>();
 
-        for (ProgramaSoftware p : listaGestion) {
-            if (p.getFuncion() == funcionBuscar) {
-                salida.add(p);
+        if(Funcion.esFuncionPrograma(entrada)) {
+            Funcion funcionBuscar = Funcion.valueOf(entrada.toUpperCase());
+            for (ProgramaSoftware p : listaGestion) {
+                if (p.getFuncion() == funcionBuscar) {
+                    salida.add(p);
+                }
             }
         }
         return salida;

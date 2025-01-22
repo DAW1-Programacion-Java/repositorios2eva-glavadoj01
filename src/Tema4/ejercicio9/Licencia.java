@@ -14,4 +14,13 @@ public enum Licencia {
     public String getName() {
         return this.name;
     }
+
+    public static boolean esLicenciaPrograma(String entrada) {
+        try{
+            Licencia.valueOf(entrada.toUpperCase());
+            return true;
+        } catch (IllegalArgumentException e){
+            return false;
+        }
+    }
 }

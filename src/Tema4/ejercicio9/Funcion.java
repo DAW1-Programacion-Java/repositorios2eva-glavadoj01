@@ -14,4 +14,13 @@ public enum Funcion {
     public String getName() {
         return this.name;
     }
+
+    public static boolean esFuncionPrograma(String entrada) {
+        try{
+            Funcion.valueOf(entrada.toUpperCase());
+            return true;
+        } catch (IllegalArgumentException e){
+            return false;
+        }
+    }
 }

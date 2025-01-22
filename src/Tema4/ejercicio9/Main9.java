@@ -18,8 +18,9 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main9 {
+    static Scanner escanear = new Scanner(System.in);
+
     public static void main(String[] args) {
-        Scanner escanear = new Scanner(System.in);
         GestionProgramas listaGestion = new GestionProgramas();
         ArrayList<ProgramaSoftware> salidaLista = new ArrayList<>();
         ProgramaSoftware salidaPrograma;
@@ -34,7 +35,7 @@ public class Main9 {
             System.out.println();
             switch (op) {
                 case 1:
-
+                    insertarProgramaNuevo();
                     break;
                 case 2:
                     listaGestion.mostrarLista();
@@ -85,7 +86,6 @@ public class Main9 {
                     System.out.println("ERROR - Opción no valida");
             }
         }
-
     }
 
     public static void menu() {
@@ -99,5 +99,44 @@ public class Main9 {
                 6. Buscar programa por nombre y retornar programa
                 7. Salir
                 Introducir opción numérica:""");
+    }
+
+    public static void insertarProgramaNuevo() {
+        ProgramaSoftware nuevo = new ProgramaSoftware();
+        String valor;
+        int num;
+
+        System.out.print("Ingrese el nombre del programa: ");
+        valor = escanear.nextLine();
+        nuevo.setNombre(valor);
+
+        System.out.print("Introduzca la versión del programa: ");
+        valor = escanear.nextLine();
+        nuevo.setVersion(valor);
+
+        while (true) {
+            Funcion.mostrarFunciones();
+            System.out.print("Introduzca la Función del programa: ");
+            valor = escanear.nextLine().toUpperCase();
+            if (Funcion.esFuncionPrograma(valor)) {
+                break;
+            }
+            System.out.println("ERROR - Elegir función enumerada");
+        }
+        nuevo.setFuncion(Funcion.valueOf(valor));
+
+
+        System.out.println("Introduzca la Desarrolladora: ");
+
+        while (true) {
+            Licencia.mostrarLicenciass();
+            System.out.print("Introduzca la Licencia del programa: ");
+            valor = escanear.nextLine().toUpperCase();
+            if (Licencia.esLicenciaPrograma(valor)) {
+                break;
+            }
+            System.out.println("ERROR - Elegir función enumerada");
+        }
+        nuevo.setLicencia(Licencia.valueOf(valor));
     }
 }

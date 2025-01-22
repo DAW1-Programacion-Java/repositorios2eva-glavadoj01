@@ -63,6 +63,19 @@ public class ProgramaSoftware {
         this.precio = Math.round(crearRandom.nextDouble(100.01));
     }
 
+    public ProgramaSoftware() {
+        contadorProgramas++;
+        this.idPrograma = contadorProgramas;
+        this.nombre = null;
+        this.version = null;
+        this.funcion = null;
+        this.annoLanzamiento = null;
+        this.desarrolladora = null;
+        this.licencia = null;
+        this.precio = -1;
+
+    }
+
 
     // Generador de Getter's & Setter's
     public int getIdPrograma() {

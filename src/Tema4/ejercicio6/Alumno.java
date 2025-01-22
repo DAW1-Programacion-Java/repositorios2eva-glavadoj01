@@ -130,6 +130,10 @@ public class Alumno {
         return (this.nota1 + this.nota2) / 2;
     }
 
+    public String resultado() {
+        return "Número exp.: " + expediente + "\nNombre: " + nombre + "\nMedia Notas: " + df.format(mediaNotas());
+    }
+
     @Override
     public String toString() {
         return "Alumno{ Expediente = " + expediente +
