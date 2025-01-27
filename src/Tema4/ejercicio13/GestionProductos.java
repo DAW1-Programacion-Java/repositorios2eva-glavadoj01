@@ -52,7 +52,8 @@ public class GestionProductos {
         DecimalFormat df = new DecimalFormat("#.##");
         System.out.println(producto1);
         System.out.println(producto2);
-        System.out.println("La diferencia de precios es: " + df.format (producto1.getPrecioVenta() - producto2.getPrecioVenta()));
+        System.out.println("La diferencia de precios es: " +
+                    df.format (producto1.getPrecioVenta() - producto2.getPrecioVenta()) + " €");
     }
 
     public void mostrarProducto(int posicion) {

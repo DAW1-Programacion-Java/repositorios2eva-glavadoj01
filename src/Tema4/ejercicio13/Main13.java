@@ -67,7 +67,7 @@ public class Main13 {
                     break;
                 case 'd':
                     cambio = true;
-                    productoSalida1=catalogoProductos.getCatalogoProductos().getFirst();
+                    productoSalida1 = catalogoProductos.getCatalogoProductos().getFirst();
                     while (cambio) {
                         System.out.print("Ingrese el código de un producto: ");
                         nombre1 = escanear.nextLine().toUpperCase();
@@ -78,7 +78,9 @@ public class Main13 {
                                 break;
                             }
                         }
-                        System.out.println("No existe el \"Código\" buscado");
+                        if (cambio) {
+                            System.out.println("No existe el \"Código\" buscado");
+                        }
                     }
                     cambio = true;
                     while (cambio) {
@@ -92,8 +94,9 @@ public class Main13 {
                                 break;
                             }
                         }
-                        System.out.println("No existe el \"Código\" buscado");
-                    }
+                        if (cambio) {
+                            System.out.println("No existe el \"Código\" buscado");
+                        }                    }
                     break;
                 case 'e':
                     System.out.print("Ingrese una posición para ver el producto asociado: ");
@@ -105,7 +108,7 @@ public class Main13 {
                     System.out.println("Ingrese un producto (posición) para remplazar los datos: ");
                     pos = escanear.nextInt();
                     escanear.nextLine();
-                    productoSalida1 = edidarProducto();
+                    productoSalida1 = editarProducto();
                     cambio = catalogoProductos.cambiarPor(productoSalida1, pos);
                     if (cambio) {
                         System.out.println("El producto se ha actualizado correctamente");
@@ -123,7 +126,7 @@ public class Main13 {
     public static char menu() {
         char opcion;
         while (true) {
-            System.out.println("""
+            System.out.print("""
                     \n\t\tMENÚ
                     a - Mostrar productos
                     b - Filtrar por precio de venta
@@ -135,6 +138,7 @@ public class Main13 {
                     Seleccionar una opción:\s""");
             opcion = escanear.next().charAt(0);
             escanear.nextLine();
+            System.out.println();
             if (opcion >= 'a' && opcion <= 'g') {
                 return opcion;
             } else if (opcion >= 'A' && opcion <= 'G') {
@@ -145,7 +149,7 @@ public class Main13 {
         }
     }
 
-    public static Producto edidarProducto() {
+    public static Producto editarProducto() {
         Tipo tipo1;
         System.out.print("Ingrese el código nuevo: ");
         String codigo = escanear.nextLine().toUpperCase();

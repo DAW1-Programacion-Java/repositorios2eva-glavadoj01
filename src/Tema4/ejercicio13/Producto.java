@@ -76,7 +76,7 @@ public class Producto {
                 "Tipo = " + tipo + " ;\t" +
                 "Precio de Venta = " + df.format(precioVenta) + " € ;\t" +
                 "Precio de Compra = " + df.format(precioCompra) + " € ;\t" +
-                "UnidadesDisponibles = " + unidadesDisponibles + " }";
+                "Unidades Disponibles = " + unidadesDisponibles + " }";
     }
 
     @Override // Solo: Código & Tipo
