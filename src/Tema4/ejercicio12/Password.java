@@ -32,21 +32,29 @@ public class Password {
         this.longitud = longitud;
         this.contrasena = generarPassword(longitud);
     }
+    public Password(String contrasena) {
+        this.longitud = contrasena.length();
+        this.contrasena = contrasena;
+    }
+    public Password(int longi, String valorFuerte) {
+        this.longitud = longi;
+        this.contrasena = generarPasswordActual(longi);
+    }
 
-    public boolean esFuerte(Password entrada) {
+    public boolean esFuerte() {
         int may = 0, min = 0, dig = 0;
-        for (int i = 0; i < entrada.longitud; i++) {
-            if (entrada.getContrasena().charAt(i) >= 'A' && entrada.getContrasena().charAt(i) <= 'Z') {
+        for (int i = 0; i < this.longitud; i++) {
+            if (this.contrasena.charAt(i) >= 'A' && this.contrasena.charAt(i) <= 'Z') {
                 may++;
-            } else if (entrada.getContrasena().charAt(i) >= 'a' && entrada.getContrasena().charAt(i) <= 'z') {
+            } else if (this.contrasena.charAt(i) >= 'a' && this.contrasena.charAt(i) <= 'z') {
                 min++;
-            } else if (entrada.getContrasena().charAt(i) >= '0' && entrada.getContrasena().charAt(i) <= '9') {
+            } else if (this.contrasena.charAt(i) >= '0' && this.contrasena.charAt(i) <= '9') {
                 dig++;
             }
         }
         return may >= 2 && min >= 1 && dig >= 3;
     }
-    private boolean esFuerte(String entrada) {
+    public boolean esFuerte(String entrada) {
         int may = 0, min = 0, dig = 0;
         for (int i = 0; i < entrada.length(); i++) {
             if (entrada.charAt(i) >= 'A' && entrada.charAt(i) <= 'Z') {
@@ -60,10 +68,10 @@ public class Password {
         return may >= 2 && min >= 1 && dig >= 3;
     }
 
-    public int getLongitud() {
+    private int getLongitud() {
         return longitud;
     }
-    public String getContrasena() {
+    private String contrasena() {
         return contrasena;
     }
 
@@ -71,11 +79,11 @@ public class Password {
     public boolean equals(Object o) {
         if (o == null || getClass() != o.getClass()) return false;
         Password password1 = (Password) o;
-        return Objects.equals(getContrasena(), password1.getContrasena());
+        return Objects.equals(contrasena(), password1.contrasena());
     }
     @Override
     public int hashCode() {
-        return Objects.hashCode(getContrasena());
+        return Objects.hashCode(contrasena());
     }
 
     private String generarPassword(int longitud) {
@@ -105,6 +113,18 @@ public class Password {
         } else {
             System.out.println("La contraseña generada no es Fuerte");
         }
+        return salida;
+    }
+
+    public static String generarPasswordActual(int longitud) {
+        Random crarRandom = new Random();
+        String salida = "";
+        char letra;
+        int nEspecial=2, nDigit=3, nMay=2;
+
+
+
+
         return salida;
     }
 }
