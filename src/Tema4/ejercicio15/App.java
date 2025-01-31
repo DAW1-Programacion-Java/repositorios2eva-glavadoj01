@@ -47,6 +47,7 @@ public class App {
 					continuar = false;
 			}
 		}
+		escanear.close();
 	}
 
 	public static char menu() {

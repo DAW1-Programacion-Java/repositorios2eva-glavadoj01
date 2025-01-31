@@ -54,6 +54,7 @@ public class Main11 {
                     continuar = false;
             }
         }
+        escanear.close();
     }
 
     public static int menu() {
