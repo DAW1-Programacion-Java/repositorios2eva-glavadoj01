@@ -15,6 +15,7 @@ Esta clase llevará los siguientes métodos:
 
 import java.text.DecimalFormat;
 import java.util.ArrayList;
+import java.util.Random;
 
 public class GestionProductos {
     private ArrayList<Producto> catalogoProductos;
@@ -72,6 +73,54 @@ public class GestionProductos {
     }
 
     private void cargarProductosAzar() {
+        Random crearRandom = new Random();
+        String codigoA;
+        String nombreA;
+        Tipo tipoA;
+        double precioVenA;
+        double precioComB;
+        int unidadesA;
+
+        for (int i = 1; i <= 50; i++) {
+            codigoA = String.valueOf(i);
+            nombreA = "Pintura " + i;
+            tipoA = Tipo.pintura;
+            precioVenA = crearRandom.nextDouble(50-10)+10;
+            precioComB = crearRandom.nextDouble(25-5)+5;
+            unidadesA = crearRandom.nextInt(11);
+            catalogoProductos.add(new Producto(codigoA,nombreA,tipoA,precioVenA,precioComB,unidadesA));
+        }
+
+        for (int i = 51; i <= 70; i++) {
+            codigoA = String.valueOf(i);
+            nombreA = "Caja de Tornillos " + i;
+            tipoA = Tipo.tornilleria;
+            precioVenA = crearRandom.nextDouble(50-10)+10;
+            precioComB = crearRandom.nextDouble(25-5)+5;
+            unidadesA = crearRandom.nextInt(11);
+            catalogoProductos.add(new Producto(codigoA,nombreA,tipoA,precioVenA,precioComB,unidadesA));
+        }
+
+        for (int i = 71; i <= 90; i++) {
+            codigoA = String.valueOf(i);
+            nombreA = "Tuberías y juntas " + i;
+            tipoA = Tipo.plomeria;
+            precioVenA = crearRandom.nextDouble(50-10)+10;
+            precioComB = crearRandom.nextDouble(25-5)+5;
+            unidadesA = crearRandom.nextInt(11);
+            catalogoProductos.add(new Producto(codigoA,nombreA,tipoA,precioVenA,precioComB,unidadesA));
+        }
+
+        for (int i = 91; i <= 100; i++) {
+            codigoA = String.valueOf(i);
+            nombreA = "Recambios nº " + i;
+            tipoA = Tipo.recambio;
+            precioVenA = crearRandom.nextDouble(50-10)+10;
+            precioComB = crearRandom.nextDouble(25-5)+5;
+            unidadesA = crearRandom.nextInt(11);
+            catalogoProductos.add(new Producto(codigoA,nombreA,tipoA,precioVenA,precioComB,unidadesA));
+        }
+
         catalogoProductos.add(new Producto("AAA","Tornillo Bueno", Tipo.tornilleria, 1.15,0.75,10));
         catalogoProductos.add(new Producto("BBB", "Tornillo Malo",Tipo.tornilleria, 0.8,0.3, 12));
         catalogoProductos.add(new Producto("CCC", "Junta tubular", Tipo.plomeria, 1.5,1.00,5));

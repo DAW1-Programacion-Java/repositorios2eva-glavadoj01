@@ -52,7 +52,7 @@ public class Password {
                 dig++;
             }
         }
-        return may >= 2 && min >= 1 && dig >= 3;
+        return may > 2 && min > 1 && dig > 3;
     }
     public boolean esFuerte(String entrada) {
         int may = 0, min = 0, dig = 0;
@@ -71,7 +71,7 @@ public class Password {
     private int getLongitud() {
         return longitud;
     }
-    private String contrasena() {
+    private String getContrasena() {
         return contrasena;
     }
 
@@ -79,11 +79,11 @@ public class Password {
     public boolean equals(Object o) {
         if (o == null || getClass() != o.getClass()) return false;
         Password password1 = (Password) o;
-        return Objects.equals(contrasena(), password1.contrasena());
+        return Objects.equals(getContrasena(), password1.getContrasena());
     }
     @Override
     public int hashCode() {
-        return Objects.hashCode(contrasena());
+        return Objects.hashCode(getContrasena());
     }
 
     private String generarPassword(int longitud) {
