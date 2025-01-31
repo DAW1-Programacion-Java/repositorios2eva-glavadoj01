@@ -30,4 +30,3 @@ public class Main2 {
         System.out.printf("El salario actual al año es de: %.2f",empleado1.getSalarioTotal());
     }
 }
-

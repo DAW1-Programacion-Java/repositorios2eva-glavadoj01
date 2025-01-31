@@ -1,7 +1,5 @@
 package ejercicio1;
 
-import java.time.LocalDate;
-
 /*
 Diseña un programa en Java que trabaje con una clase llamada Alumno. Serán
 atributos del alumno su número de expediente, nombre, apellidos, fecha de nacimiento
@@ -9,6 +7,9 @@ y curso en el que se matricula. La clase debe incluir un constructor y los méto
 y set correspondientes y toString. Instancia varios objetos de esta clase y prueba los
 métodos creados.
 */
+
+import java.time.LocalDate;
+
 public class Main1 {
     public static void main(String[] args) {
         Alumno persona1 = new Alumno(1234, "Alicia", "García García", LocalDate.of(1995, 1, 25), "Programación");

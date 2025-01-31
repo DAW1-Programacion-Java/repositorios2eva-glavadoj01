@@ -1,4 +1,5 @@
 package ejercicio3;
+
 /*
 Diseña un programa Java que guarde información sobre los taxis de una compañía.
 De cada taxi debe guardarse la matrícula, distrito en el que opera (sur, norte, oeste…),
@@ -31,4 +32,3 @@ public class Main3 {
         }
     }
 }
-

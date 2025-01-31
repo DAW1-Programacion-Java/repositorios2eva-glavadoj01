@@ -1,4 +1,5 @@
 package ejercicio6;
+
 /*
 Diseña un programa Java que trabaje con la clase Alumno del ejercicio 5, copiándola
 y pegándola en este. Crea otra clase llamada GestionAlumnos con las siguientes características:

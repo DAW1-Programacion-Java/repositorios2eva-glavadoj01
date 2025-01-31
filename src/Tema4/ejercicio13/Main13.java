@@ -18,7 +18,7 @@ Esta clase llevará los siguientes métodos:
                            Devuelve verdadero o falso, según se haya podido hacer el cambio o no.
 
 En el main crea un objeto de la clase GestionProductos y prueba sus métodos.
- */
+*/
 
 import java.util.ArrayList;
 import java.util.Scanner;
