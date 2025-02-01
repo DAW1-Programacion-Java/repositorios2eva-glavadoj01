@@ -1,5 +1,6 @@
 package ejercicio4;
 
+import java.util.ArrayList;
 /*
 Diseña un programa Java que trabaje con una clase llamada DvdCine.
 a. Su atributos serán: título, director, productora, actores principales, género, resumen y duración.
@@ -9,9 +10,7 @@ d. Crea todos los métodos gets/sets.
 e. Crea un método llamada mismaProductora que reciba un objeto de la clase DvdCine como parámetro.
    Este método devuelve true o false si el objeto utilizado con el método es de la misma productora que el pasado como parámetro.
 f. Crea objetos y prueba estos métodos.
-*/
-
-import java.util.ArrayList;
+ */
 
 public class Main4 {
     public static void main(String[] args) {

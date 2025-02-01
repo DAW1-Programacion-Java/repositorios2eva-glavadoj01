@@ -1,5 +1,4 @@
 package ejercicio5;
-
 /*
 En un nuevo proyecto, copia la clase Alumno del ejercicio 1, y añade:
 a. Dos atributos que guarden sendas notas (tipo double).

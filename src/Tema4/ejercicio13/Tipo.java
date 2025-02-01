@@ -1,5 +1,7 @@
 package ejercicio13;
 
+import ejercicio9.Funcion;
+
 public enum Tipo {
     pintura ("Pintura"),
     herramienta("Herramienta"),
