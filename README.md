@@ -1,6 +1,6 @@
 # Alumno<br>Gonzalo Lavado 
 
-Repositorio donde se situan los proyectos que son tareas entregables de la 2ª Evaluación para el curso 24-25
+Repositorio Público donde se situan parcialmente los proyectos que son tareas entregables de la 2ª Evaluación para el curso 24-25
 
 ### Índice Cronológico de contenidos:
 
