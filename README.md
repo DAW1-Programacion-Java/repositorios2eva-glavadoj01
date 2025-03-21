@@ -1,7 +1,17 @@
-# Alumno
-## Gonzalo Lavado 
+# Alumno<br>Gonzalo Lavado 
 
-Repositorio donde se situan los proyectos que son tareas entregables del curso 24-25
+Repositorio donde se situan los proyectos que son tareas entregables de la 2ª Evaluación para el curso 24-25
+
+### Índice Cronológico de contenidos:
+
+- Conecta 4 - Trabajo Grupo 1tB
+- Unidad 4
+- Unidad 5
+- Exámen 1 - Exámen Febrero
+- Exámen De Segundo - Exámen de recuperación del 2º curso - Realización de apartados procedentes para 1º
+- Unidad 6
+- Unidad 6 - Actividad 2 - Proyecto Maven Independiente
+- Exámen 2 - Exámen Marzo
 
 #### Repositorio Completo del Alumno
 
